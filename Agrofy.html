@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrofy - User Profile</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('farm-background.jpeg') no-repeat center center fixed;
+            background-size: cover; /* Adjusted background-size to cover the entire viewport */
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px; /* Adjusted padding for a smaller form */
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            max-width: 300px; /* Adjusted max-width for a smaller form */
+            width: 100%;
+            text-align: center;
+            box-sizing: border-box;
+            z-index: 1; /* Ensures the form is positioned above the background */
+        }
+
+        h2 {
+            color: #333;
+            font-size: 20px; /* Adjusted font-size for a smaller heading */
+            margin-bottom: 15px; /* Adjusted margin for a smaller heading */
+            margin-top: 0;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px; /* Adjusted margin for labels */
+            color: #555;
+            font-size: 14px;
+        }
+
+        input {
+            width: calc(100% - 20px);
+            padding: 8px; /* Adjusted padding for smaller input fields */
+            margin: 5px 0 10px; /* Adjusted margin for input fields */
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px; /* Adjusted padding for a smaller button */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px; /* Adjusted font-size for a smaller button */
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <h2>Agrofy - User Profile</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="mobile">Mobile No.:</label>
+        <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state" required>
+
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required>
+
+        <label for="taluka">Taluka Place:</label>
+        <input type="text" id="taluka" name="taluka" required>
+
+        <label for="farm-size">Farm Size:</label>
+        <input type="text" id="farm-size" name="farm-size" required>
+
+        <label for="crops-grown">Crops Grown:</label>
+        <input type="text" id="crops-grown" name="crops-grown" required>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

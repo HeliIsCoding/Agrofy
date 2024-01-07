@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrofy - Weather Information</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-image: url('Weather.jpg'); /* Replace 'your-background-image.jpg' with your image URL */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        header {
+            background: rgba(76, 175, 80, 0.8); /* Agrofy brand color with transparency */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0.9); /* White background with transparency */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+            margin-top: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            position: relative; /* Added relative positioning for absolute positioning inside */
+        }
+
+        h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .temperature {
+            color: #333;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sun-icon {
+            width: 30px; /* Adjusted width of the sun icon */
+            height: auto;
+            margin-right: 10px; /* Added margin to separate the sun icon from the temperature */
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049; /* Darker color on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Agrofy - Weather Information</h1>
+    </header>
+
+    <section>
+        <h2>WeatherToday : Vasad</h2>
+        <p>Today's Temperature:</p>
+        <div class="temperature" id="temperature">
+            <img src="Sun.png" alt="Sun Icon" class="sun-icon"> <!-- Add your sun icon image -->
+            27°C
+        </div>
+        <button type="button" onclick="refreshWeather()">Refresh</button>
+    </section>
+
+    <script>
+        function refreshWeather() {
+            const temperatureElement = document.getElementById('temperature');
+            // Example: Set a new temperature value for Vasad
+            const newTemperature = Math.floor(Math.random() * 10) + 20; // Random value between 20 and 30
+            temperatureElement.innerHTML = `<img src="sun-icon.png" alt="Sun Icon" class="sun-icon">${newTemperature}°C`;
+        }
+    </script>
+</body>
+
+</html>
